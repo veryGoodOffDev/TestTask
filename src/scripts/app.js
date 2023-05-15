@@ -64,7 +64,6 @@ function btnHandler() {
 
 function changeTheme(isDarkTheme) {
     const theme = isDarkTheme ? 'dark' : 'light'
-    console.log(theme)
     Object.entries(themes[theme]).forEach(([key, value]) => {
         root.style.setProperty(key, value)
     })
@@ -165,19 +164,9 @@ function getDateInfo(date) {
     return `Date added: ${formatDate[0]}, ${formatDate[1]} ${formatDate[2]}, ${newDate.getFullYear()} года`
 }
 
-console.log(getDateInfo('15.12.2021'))
-
-const dateCard = cards[1].querySelector('.card__date-add-info')
-
-dateCard.textContent = getDateInfo('10.12.2023')
-
-console.log(cards)
-
 function getRandomNumber(min, max) {
     return Math.floor(Math.random()*(max-min)+min) 
 }
-console.log(getRandomNumber(1,12))
-
 
 
 
