@@ -171,7 +171,7 @@ function getRandomNumber(min, max) {
 
 
 cards.forEach((card)=> {
-    const dateForCard = new Date(2022, getRandomNumber(0,11), getRandomNumber(1,28)).toLocaleString('ru-RU',{year: 'numeric', month: 'numeric', day: 'numeric'})
+    const dateForCard = new Date(2023, getRandomNumber(0,4), getRandomNumber(1,28)).toLocaleString('ru-RU',{year: 'numeric', month: 'numeric', day: 'numeric'})
     const infodateCard = card.querySelector('.card__date-add-info')
     infodateCard.textContent = getDateInfo(dateForCard)
 })
