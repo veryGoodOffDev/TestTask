@@ -1,3 +1,4 @@
+
 const mainFormContainer = document.querySelector('.form__product')
 const buttonsBuyProduct = document.querySelectorAll('.card__add')
 const overlayForm = document.querySelector('.form__overlay')
@@ -9,10 +10,12 @@ const burgerMenuButton = document.querySelector('.header__nav-burger')
 const navMenuList = document.querySelector('.nav__menu-list')
 const root = document.querySelector(':root')
 const cards = document.querySelectorAll('.card')
-
-
-
+const chosenColor = document.querySelector('.chosen__color-area')
+const customRadio = document.querySelectorAll('.custom__radio')
+const quantity = document.querySelector('.count')
+const textAreaComment = document.querySelector('.textarea__comment')
 const themes = {
+
     dark:{
             '--header-bg-color':'rgba(0, 0, 0, .9)',
             '--text-color':'#ffffff',
@@ -35,6 +38,7 @@ const themes = {
             '--text-color-label':'#ffffff',
     }
 }
+
 
 burgerMenuButton.addEventListener('click', (e)=> {
     navMenuList.classList.toggle('open')
@@ -70,13 +74,25 @@ function changeTheme(isDarkTheme) {
 }
 
 buttonsBuyProduct.forEach((button) => {
-    button.addEventListener('click', () => {openOverlay()})
+    button.addEventListener('click', () => {
+        openOverlay()
+        customRadio[0].classList.add('checked')
+        chosenColor.style.backgroundColor = 'black'
+        quantity.value = '1'
+        textAreaComment.value = ''
+    })
 })
 closeFormButton.addEventListener('click', ()=> {closeOverlay()})
 
 successButton.addEventListener('click', () => {
     successMessage.classList.add('show-message')
     mainFormContainer.style.top = '200vh'
+    const data = {
+        quantity:quantity.value,
+        chosen_color:chosenColor.style.backgroundColor,
+        comment:textAreaComment.value,
+    }
+    console.log(data)
     setTimeout(()=> {
         closeOverlay()
     },3000)
@@ -112,13 +128,13 @@ function openOverlay() {
     mainFormContainer.classList.add('show')
     overlayForm.classList.add('show')
     setTimeout(()=> {
-        mainFormContainer.style.opacity = 1;
+        mainFormContainer.style.opacity = '1';
         overlayForm.style.backgroundColor = 'rgba(0,0,0,0.9)'
     },300)
     body.classList.add('modal-open')
 }
 function closeOverlay() {
-    mainFormContainer.style.opacity = 0;
+    mainFormContainer.style.opacity = '0';
     overlayForm.style.backgroundColor = 'rgba(0,0,0,.0)'
     successMessage.classList.remove('show-message')
             setTimeout(()=> {
@@ -129,9 +145,6 @@ function closeOverlay() {
             },300)
             body.classList.remove('modal-open')
 }
-
-
-
 
 const month = {
     1:'Января', 2:'Февраля',3:'Марта',4:'Апреля',5:'Мая',6:'Июня',7:'Июля',8:'Августа',9:'Сентября',10:'Октября',11:'Ноября',12:'Декабря'
@@ -175,3 +188,50 @@ cards.forEach((card)=> {
     const infodateCard = card.querySelector('.card__date-add-info')
     infodateCard.textContent = getDateInfo(dateForCard)
 })
+
+
+
+customRadio.forEach((btn) => {
+    btn.addEventListener('click', ({target})=> {
+        customRadio.forEach((btn)=>{
+            btn.classList.remove('checked')
+        })
+      
+      target.classList.add('checked')
+      if(target.getAttribute('name') === 'white') {
+      target.style.setProperty('--bg-round', 'white' )
+      chosenColor.style.backgroundColor = 'white'
+    } else if (target.getAttribute('name') === 'black'){
+        target.style.setProperty('--bg-round', 'black')
+        chosenColor.style.backgroundColor = 'black'
+    } else if (target.getAttribute('name') === 'red') {
+        target.style.setProperty('--bg-round', 'red')
+        chosenColor.style.backgroundColor = 'red'
+    }
+    
+    })
+    
+    
+})
+const allSsections = document.querySelectorAll('.section')
+console.log(allSsections)
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting) {
+            console.log('entry.isIntersecting')
+            const links = document.querySelectorAll('.nav__menu-link')
+            links.forEach((link)=> {
+                let id = link.getAttribute('href').replace('#', '')
+                console.log(entry.target.id)
+                if(id === entry.target.id) {
+                    link.classList.add('active')
+                } else {
+                    link.classList.remove('active')
+                }
+            })
+        }
+    })
+}, {
+    threshold:0.3,
+})
+allSsections.forEach((sec) => (observer.observe(sec)))

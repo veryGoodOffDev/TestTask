@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="./src/styles/style.css" />
     <title>Nike Shop</title>
   </head>
@@ -27,8 +27,14 @@
             </div>
             <p class="choose__color">Choose color:</p>
             <div class="input__group">
-              <label for="red">Red</label>
-              <input class="check__color" type="radio" name="color" id="red" />
+              <span>Black</span>
+              <div class="custom__radio checked" name = 'black'></div>
+              <span>White</span>
+              <div class="custom__radio" name = 'white'></div>
+              <span>Red</span>
+              <div class="custom__radio" name = 'red'></div>
+              <!-- <label for="red">Red</label>
+              <input class="check__color" type="radio" name="color" id="red" checked />
               <label for="white">White</label>
               <input
                 class="check__color"
@@ -43,9 +49,13 @@
                 type="radio"
                 name="color"
                 id="black"
-              />
-
+              />-->
+            </div> 
+            <div class="chosen__color">
+              <h4>Chosen color</h2>
+              <span class="chosen__color-area"></span>
             </div>
+
             
             <textarea
               class="textarea__comment"
@@ -82,10 +92,10 @@
               <img src="src/img/Logo.png" alt="logo" />
             </a>
             <ul class="nav__menu-list">
-                <li class="nav__menu-item"><a href="#">New Arrival</a></li>
-                <li class="nav__menu-item"><a href="#men">For Men</a></li>
-                <li class="nav__menu-item"><a href="#women">For Women</a></li>
-                <li class="nav__menu-item"><a href="#kids">For Kids</a></li>
+                <li><a class="nav__menu-link active" href="#new">New Arrival</a></li>
+                <li><a class="nav__menu-link" href="#men">For Men</a></li>
+                <li><a class="nav__menu-link" href="#women">For Women</a></li>
+                <li><a class="nav__menu-link" href="#kids">For Kids</a></li>
               </ul>
             <div class="switch__theme">
             </div>
@@ -96,7 +106,8 @@
 
       <main class="main">
         <section
-          class="hero"
+          class="section hero"
+          id="new"
           style="
             background-image: url(src/img/Background.jpg);
             background-position: center;
@@ -115,7 +126,7 @@
             </div>
           </div>
         </section>
-        <section class="for__men" id="men">
+        <section class="section for__men" id="men">
           <!-- <div class="top__line" style="background-image: url(src/img/Labels.png); background-position: center; background-repeat: no-repeat;"> -->
 
           <!-- </div> -->
@@ -301,7 +312,7 @@
             </div>
           </div>
         </section>
-        <section class="for__women" id="women">
+        <section class="section for__women" id="women">
           <div class="container">
             <h2>For women</h2>
             <div class="cards">
@@ -525,7 +536,7 @@
             </div>
           </div>
         </section>
-        <section class="for__kids" id="kids">
+        <section class="section for__kids" id="kids">
           <div class="container">
             <h2>For kids</h2>
             <div class="cards">
@@ -718,7 +729,6 @@
         </div>
       </footer>
     </div>
-
     <script src="./src/scripts/app.js"></script>
   </body>
 </html>
