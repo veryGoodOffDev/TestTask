@@ -177,7 +177,8 @@ font-size: 16px;
   background-color: #018ddf;
   border-radius: 50%;
   --bg-round: #000;
-  --text-content: 'Red'
+  --text-content: 'Red';
+  cursor: pointer;
   
 }
 .custom__radio.checked::before {
