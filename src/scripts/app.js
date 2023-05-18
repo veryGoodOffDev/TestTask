@@ -94,7 +94,6 @@ successButton.addEventListener("click", () => {
     chosen_color: chosenColor.style.backgroundColor,
     comment: textAreaComment.value,
   };
-  console.log(data);
   setTimeout(() => {
     closeOverlay();
   }, 3000);
@@ -240,7 +239,6 @@ const observer = new IntersectionObserver(
         const links = $$(".nav__menu-link");
         links.forEach((link) => {
           let id = link.getAttribute("href").replace("#", "");
-          console.log(entry.target.id);
           if (id === entry.target.id) {
             link.classList.add("active");
           } else {
