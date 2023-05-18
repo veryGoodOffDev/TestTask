@@ -15,8 +15,9 @@ const mainFormContainer = $(".order-form"),
   textAreaComment = $(".order-form__textarea-comment"),
   customRadio = $$(".order-form__custom-radio"),
   cards = $$(".card"),
-  buttonsBuyProduct = $$(".card__add"),
-  themes = {
+  buttonsBuyProduct = $$(".card__add")
+
+  const themes = {
     dark: {
       "--header-bg-color": "rgba(0, 0, 0, .9)",
       "--text-color": "#ffffff",
@@ -76,6 +77,9 @@ function changeTheme(isDarkTheme) {
 buttonsBuyProduct.forEach((button) => {
   button.addEventListener("click", () => {
     openOverlay();
+    customRadio.forEach((btn) => {
+        btn.classList.remove("checked");
+      });
     customRadio[0].classList.add("checked");
     chosenColor.style.backgroundColor = "black";
     quantity.value = "1";
