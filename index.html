@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="./src/styles/style.css" />
     <title>Nike Shop</title>
   </head>
@@ -11,63 +11,63 @@
     <div class="wrapper">
       <div class="btn-up btn-up_hide"></div>
 
-      <div class="form__overlay">
-        <div class="form__product">
-          <form action="" class="main__form" name="main">
-            <div class="count_products">
-              <label for="count">Choose quantity</label>
-              <input
-                class="count"
-                type="number"
-                name="count"
-                id=""
-                value="1"
-                min="1"
-              />
-            </div>
-            <p class="choose__color">Choose color:</p>
-            <div class="input__group">
-              <span>Black</span>
-              <div class="custom__radio checked" name = 'black'></div>
-              <span>White</span>
-              <div class="custom__radio" name = 'white'></div>
-              <span>Red</span>
-              <div class="custom__radio" name = 'red'></div>
-            </div> 
-            <div class="chosen__color">
-              <h4>Chosen color</h2>
-              <span class="chosen__color-area"></span>
-            </div>
-
-            
-            <textarea
-              class="textarea__comment"
-              name=""
+      <div class="overlay">
+        <form action="#" class="order-form" name="main">
+          <div class="order-form__quantity-products">
+            <label for="count">Choose quantity</label>
+            <input
+              class="count"
+              type="number"
+              name="count"
               id=""
-              cols="30"
-              rows="10"
-              maxlength="2000"
-              placeholder="Оставьте комментарий... максимум 2000 символов"
-              aria-valuetext=""
-            ></textarea>
-            <div class="form__button-group">
-              <button type="button" class="form__button" id="success">
-                Купить
-              </button>
-              <button type="button" class="form__button" id="close">
-                Закрыть
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="success__message">
-          <p><span class="success__message-icon"></span>Order in Processing. Thank you!</p>
+              value="1"
+              min="1"
+            />
+          </div>
+          <p class="order-form__choose-color">Choose color:</p>
+          <div class="order-form__input-group">
+            <span>Black</span>
+            <div class="order-form__custom-radio checked" name="black"></div>
+            <span>White</span>
+            <div class="order-form__custom-radio" name="white"></div>
+            <span>Red</span>
+            <div class="order-form__custom-radio" name="red"></div>
+          </div>
+          <div class="order-form__chosen-color">
+            <h4>Chosen color</h4>
+            <span class="order-form__chosen-color-area"></span>
+          </div>
+
+          <textarea
+            class="order-form__textarea-comment"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            maxlength="2000"
+            placeholder="Оставьте комментарий... максимум 2000 символов"
+            aria-valuetext=""
+          ></textarea>
+          <div class="order-form__button-group">
+            <button type="button" class="order-form__button" id="success">
+              Купить
+            </button>
+            <button type="button" class="order-form__button" id="close">
+              Закрыть
+            </button>
+          </div>
+        </form>
+        <div class="success-message">
+          <p>
+            <span class="success-message-icon"></span>Order in Processing. Thank
+            you!
+          </p>
         </div>
       </div>
 
       <header class="header">
         <div class="container">
-          <nav class="nav__menu">          
+          <nav class="nav__menu">
             <div class="header__nav-burger">
               <span></span>
             </div>
@@ -75,14 +75,14 @@
               <img src="src/img/Logo.png" alt="logo" />
             </a>
             <ul class="nav__menu-list">
-                <li><a class="nav__menu-link active" href="#new">New Arrival</a></li>
-                <li><a class="nav__menu-link" href="#men">For Men</a></li>
-                <li><a class="nav__menu-link" href="#women">For Women</a></li>
-                <li><a class="nav__menu-link" href="#kids">For Kids</a></li>
-              </ul>
-            <div class="switch__theme">
-            </div>
-            
+              <li>
+                <a class="nav__menu-link active" href="#new">New Arrival</a>
+              </li>
+              <li><a class="nav__menu-link" href="#men">For Men</a></li>
+              <li><a class="nav__menu-link" href="#women">For Women</a></li>
+              <li><a class="nav__menu-link" href="#kids">For Kids</a></li>
+            </ul>
+            <div class="switch__theme"></div>
           </nav>
         </div>
       </header>
@@ -116,10 +116,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-1.png"
-                      alt="Nike Cosmic Unity 2"
-                    />
+                    <img src="src/img/Image-1.png" alt="Nike Cosmic Unity 2" />
                   </a>
                   <div class="card__label">New</div>
                 </div>
@@ -132,10 +129,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-2.png"
-                      alt="Nike SB Dunk High"
-                    />
+                    <img src="src/img/Image-2.png" alt="Nike SB Dunk High" />
                   </a>
                   <div class="card__label">Bestseller</div>
                 </div>
@@ -148,10 +142,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-3.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-3.png" alt="Nike Dynamo GO SE" />
                   </a>
                   <div class="card__label">Label</div>
                 </div>
@@ -164,10 +155,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-7.png"
-                      alt="Nike Air Max Plus 3"
-                    />
+                    <img src="src/img/Image-7.png" alt="Nike Air Max Plus 3" />
                   </a>
                   <div class="card__label">New</div>
                 </div>
@@ -180,10 +168,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-8.png"
-                      alt="Air Jordan 4 Retro"
-                    />
+                    <img src="src/img/Image-8.png" alt="Air Jordan 4 Retro" />
                   </a>
                   <div class="card__label">Bestseller</div>
                 </div>
@@ -196,10 +181,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-6.png"
-                      alt="Nike Cosmic Unity 2"
-                    />
+                    <img src="src/img/Image-6.png" alt="Nike Cosmic Unity 2" />
                   </a>
                   <div class="card__label">Label</div>
                 </div>
@@ -212,10 +194,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-7.png"
-                      alt="Nike SB Dunk High"
-                    />
+                    <img src="src/img/Image-7.png" alt="Nike SB Dunk High" />
                   </a>
                   <div class="card__label">Sale</div>
                 </div>
@@ -228,10 +207,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-9.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-9.png" alt="Nike Dynamo GO SE" />
                   </a>
                   <div class="card__label">New</div>
                 </div>
@@ -244,10 +220,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-10.png"
-                      alt="Nike Air Max Plus 3"
-                    />
+                    <img src="src/img/Image-10.png" alt="Nike Air Max Plus 3" />
                   </a>
                   <div class="card__label">Label</div>
                 </div>
@@ -260,10 +233,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-11.png"
-                      alt="Air Jordan 4 Retro"
-                    />
+                    <img src="src/img/Image-11.png" alt="Air Jordan 4 Retro" />
                   </a>
                   <div class="card__label">Bestseller</div>
                 </div>
@@ -276,10 +246,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-12.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-12.png" alt="Nike Dynamo GO SE" />
                   </a>
                   <div class="card__label">New</div>
                 </div>
@@ -299,10 +266,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-1.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-1.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">Sale</div>
@@ -318,10 +282,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-2.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-2.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">Bestseller</div>
@@ -329,17 +290,14 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Nike SB Dunk High </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-3.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-3.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">Label</div>
@@ -347,17 +305,14 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Nike Dynamo GO SE </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-7.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-7.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">Bestseller</div>
@@ -365,17 +320,14 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Nike Air Max Plus 3 </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>                    
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-8.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-8.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">New</div>
@@ -383,17 +335,14 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Air Jordan 4 Retro </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>                    
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-13.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-13.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">New</div>
@@ -401,17 +350,14 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Air Jordan 4 Retro </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>                   
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-14.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-14.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">New</div>
@@ -419,17 +365,14 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Air Jordan 4 Retro </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>                    
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-15.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-15.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">New</div>
@@ -437,17 +380,14 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Air Jordan 4 Retro </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>                   
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-16.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-16.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">New</div>
@@ -455,17 +395,14 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Air Jordan 4 Retro </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>                   
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-17.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-17.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">New</div>
@@ -473,17 +410,14 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Air Jordan 4 Retro </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>                    
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-3.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-3.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">New</div>
@@ -491,7 +425,7 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Air Jordan 4 Retro </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>                  
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
@@ -509,7 +443,7 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Air Jordan 4 Retro </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>                    
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
@@ -523,10 +457,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-1.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-1.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">Sale</div>
@@ -534,17 +465,14 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Nike Cosmic Unity 2 </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>                   
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-2.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-2.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">Sale</div>
@@ -552,17 +480,14 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Nike SB Dunk High </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>                   
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-3.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-3.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">Bestseller</div>
@@ -570,17 +495,14 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Nike Dynamo GO SE </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>                   
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-7.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-7.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">Label</div>
@@ -588,17 +510,14 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Nike Air Max Plus 3 </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>                   
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-8.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-8.png" alt="Nike Dynamo GO SE" />
                   </a>
 
                   <div class="card__label">New</div>
@@ -606,17 +525,14 @@
 
                 <div class="card__bottom">
                   <a href="#" class="card__title"> Air Jordan 4 Retro </a>
-                    <div class="card__date-add-info">Added: 1.01.2023</div>                   
+                  <div class="card__date-add-info">Added: 1.01.2023</div>
                   <button class="card__add">Купить</button>
                 </div>
               </div>
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-7.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-7.png" alt="Nike Dynamo GO SE" />
                   </a>
                   <div class="card__label">Sale</div>
                 </div>
@@ -629,10 +545,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-9.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-9.png" alt="Nike Dynamo GO SE" />
                   </a>
                   <div class="card__label">New</div>
                 </div>
@@ -645,10 +558,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-10.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-10.png" alt="Nike Dynamo GO SE" />
                   </a>
                   <div class="card__label">Label</div>
                 </div>
@@ -661,10 +571,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-11.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-11.png" alt="Nike Dynamo GO SE" />
                   </a>
                   <div class="card__label">Bestseller</div>
                 </div>
@@ -677,10 +584,7 @@
               <div class="card">
                 <div class="card__top">
                   <a href="#" class="card__image">
-                    <img
-                      src="src/img/Image-12.png"
-                      alt="Nike Dynamo GO SE"
-                    />
+                    <img src="src/img/Image-12.png" alt="Nike Dynamo GO SE" />
                   </a>
                   <div class="card__label">New</div>
                 </div>
@@ -697,8 +601,7 @@
       <footer class="footer">
         <div class="container">
           <div class="footer__inner">
-            <div class="footer__logo">
-            </div>
+            <div class="footer__logo"></div>
             <ul class="footer__list">
               <li class="footer-list-item"><a href="#">New Arrival</a></li>
               <li class="footer-list-item"><a href="#men">For Men</a></li>
